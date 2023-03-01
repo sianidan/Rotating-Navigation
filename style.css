@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* GENERAL STYLES */
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+}
+
+small {
+    font-style: italic;
+    color: rgb(88, 104, 150);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li, button, a {
+    color: white;
+}
+
+/* MAIN STYLES */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(29, 36, 62);
+    color: rgb(29, 36, 62);
+    overflow-x: hidden;
+    margin: 0;
+    line-height: 1.5rem;
+}
+
+.container {
+    background-color: rgb(224, 230, 255);
+    padding: 3rem;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+.circle-container {
+    position: fixed;
+    top: -6rem;
+    left: -6rem;
+}
+
+.circle {
+    background-color: rgb(101, 11, 157);
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 6rem;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+button#open {
+    left: 60%;
+}
+
+button#close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.content img {
+    max-width: 100%;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 3rem auto;
+}
+
+.container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.2s;
+}
+
+nav {
+    position: fixed;
+    bottom: 2.5rem;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul li i {
+    width: 1.5rem;
+    text-align: center;
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 0.5rem 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in;
+}
+
+.about {
+    margin-left: 1rem;
+    transform: translateX(-150%);
+}
+
+.contact {
+    margin-left: 2rem;
+    transform: translateX(-200%);
+}
